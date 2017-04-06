@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pavanam|Press+Start+2P|Russo+One" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat" rel="stylesheet">
     <script src="js/jquery-3.2.0.js"></script>
@@ -10,6 +11,7 @@
   </head>
   <body>
     <div class="container">
+      <img src="img/beer.jpg" width="100%" alt="beer flight">
       <h1>Bar Breakdown</h1>
       <form>
         <div class="form-group">
@@ -24,30 +26,36 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="tilTotal">Enter Your Total Til Cash</label>
+          <label for="tilTotal"><span class="bolded">Total Til Cash</span></label>
           <input class="form-control" type="number" id="tilTotal">
         </div>
         <div class="form-group">
-          <label for="posCash">Enter the POS Cash Number</label>
+          <label for="posCash"><span class="bolded">POS Cash Number</span></label>
           <input class="form-control" type="number" id="posCash">
         </div>
         <div class="form-group">
-          <label for="cashTips">Enter Your Total Cash Tips</label>
+          <label for="cashTips"><span class="bolded">Cash Tips</span></label>
           <input class="form-control" type="number" id="cashTips">
         </div>
         <div class="form-group">
-          <label for="ccTips">Enter Your Total Credit Card Tips</label>
+          <label for="ccTips"><span class="bolded">Credit Card Tips</span></label>
           <input class="form-control" type="number" id="ccTips">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </form>
       <br>
       <div class="breakdown">
-        <p> Actual Cash: <span id="actualCash"> </span></p>
-        <p>Dif: <span id="difference"> </span><p>
-        <p>Total Tips: <span id="totalTips"> </span><p>
-        <p>Drop: <span id="drop"> </span><p>
+        <h2>End of Night Summary</h2>
+        <p><span class="bolded">Actual Cash:</span> <span id="actualCash"> </span></p>
+        <p><span class="bolded">POS Cash:</span> <span id="outputPOSCash"> </span></p>
+        <p><span class="bolded">Actual Cash vs POS Cash:</span> <span id="difference"> </span><p>
+        <br>
+        <p><span class="bolded">Cash Tips:</span> <span id="outputCashTips"> </span></p>
+        <p><span class="bolded">Credit Card Tips:</span> <span id="outputCCTips"> </span></p>
+        <p><span class="bolded">Total Tips:</span> <span id="totalTips"> </span></p>
+        <br>
+        <p><span class="bolded">Drop:</span> <span id="drop"> </span><p>
       </div>
     </div>
   </body>

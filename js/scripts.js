@@ -37,11 +37,16 @@ $(document).ready(function () {
   $("form").submit(function(event) {
     event.preventDefault();
 
+    $(".breakdown").show();
     var weekday = $("select#weekdays").val();
     var tilTotal = parseInt($('input#tilTotal').val());
     var posCash = parseInt($('input#posCash').val());
     var cashTips = parseInt($('input#cashTips').val());
     var ccTips = parseInt($('input#ccTips').val());
+
+    $("#outputPOSCash").text(posCash);
+    $("#outputCashTips").text(cashTips);
+    $("#outputCCTips").text(ccTips);
 
     var actualCash = actualCashMath(tilTotal);
     $("#actualCash").text(actualCash);
@@ -54,6 +59,7 @@ $(document).ready(function () {
 
     var Drop = actualCash - ccTips
     $("#drop").text(Drop);
+
 
 
 
